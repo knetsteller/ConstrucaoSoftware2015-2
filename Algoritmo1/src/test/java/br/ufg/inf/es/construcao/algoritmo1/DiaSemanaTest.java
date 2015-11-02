@@ -47,7 +47,7 @@ public class DiaSemanaTest {
         int mes = 11;
         int ano = 2015;
         DiaSemana instance = new DiaSemana();
-        int expResult = 1;
+        int expResult = 6;
         int result = instance.calculaDiaDaSemana(dia, mes, ano);
         assertEquals(expResult, result);
     }    
