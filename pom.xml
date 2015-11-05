@@ -10,6 +10,24 @@
         <module>Algoritmo2</module>
         <module>Algoritmo3</module>
         <module>Algoritmo4</module>
+        <module>Algoritmo5</module>
+        <module>Algoritmo6</module>
+        <module>Algoritmo9</module>
+        <module>Algoritmo12</module>
+        <module>Algoritmo13</module>
+        <module>Algoritmo19</module>
+        <module>Algoritmo27</module>
+        <module>Algoritmo46</module>
+        <module>Algoritmo48</module>
+        <module>Algoritmo42</module>
+        <module>Algoritmo38</module>
+        <module>Algoritmo37</module>
+        <module>Algoritmo32</module>
+        <module>Algoritmo25</module>
+        <module>Algoritmo24</module>
+        <module>Algoritmo23</module>
+        <module>Algoritmo21</module>
+        <module>Algoritmo16</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
