@@ -1,11 +1,12 @@
 package br.ufg.inf.es.construcao.algoritmo16;
 
 /**
- * Classe que contendo método para cálculo do fatorial do inteiro n fornecido.
+ * Classe que contendo método para cálculo de fatorial.
  */
 public class Fatorial {
     
     /**
+     * Calcula o fatorial do inteiro n fornecido.
      * @param n Inteiro cujo fatorial será calculado.
      * @return Inteiro correspondente ao fatorial de n.
      * @throws IllegalArgumentException se n é menor que 1.
@@ -15,14 +16,14 @@ public class Fatorial {
             throw new IllegalArgumentException("n deve ser maior ou igual a 1.");
         }
         
-        int i = 2;
-        int f = 1;
+        int contador = 2;
+        int fatorial = 1;
         
-        while (i <= n) {            
-            f *= i;
-            i += 1;
+        while (contador <= n) {            
+            fatorial *= contador;
+            contador += 1;
         }
         
-        return f;
+        return fatorial;
     }
 }

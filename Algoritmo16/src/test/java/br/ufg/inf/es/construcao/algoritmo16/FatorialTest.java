@@ -7,12 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Netsteller
- */
-public class FatorialTest {
-    
+public class FatorialTest {    
     Fatorial fatorial;
     
     public FatorialTest() {
@@ -36,24 +31,17 @@ public class FatorialTest {
     }
     
     @Test
-    public void calculaFatorial_nIgualA1_1() {
-        int n = 1;
-        int resultadoExperado = 1;
-        int resultado = fatorial.calculaFatorial(n);
-        assertEquals(resultadoExperado, resultado);
+    public void testCalculaFatorialNIgualAUm() {
+        assertEquals(1, fatorial.calculaFatorial(1));
     }
 
     @Test
-    public void calculaFatorial_nIgualA3_6() {
-        int n = 3;
-        int resultadoExperado = 6;
-        int resultado = fatorial.calculaFatorial(n);
-        assertEquals(resultadoExperado, resultado);
+    public void testCalculaFatorialNMaiorQueUm() {
+        assertEquals(6, fatorial.calculaFatorial(3));
     }
     
     @Test(expected = IllegalArgumentException.class)
-    public void calculaFatorial_nMenorQue3_ExcecaoLancada() {
-        int n = 0;
-        int resultado = fatorial.calculaFatorial(n);
+    public void testCalculaFatorialNMenorQueTres() {
+        fatorial.calculaFatorial(0);
     }
 }

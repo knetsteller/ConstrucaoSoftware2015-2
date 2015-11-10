@@ -1,50 +1,39 @@
-
 package br.ufg.inf.es.construcao.algoritmo4;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Netsteller
- */
 public class ProdutoTest {
-    
-    public ProdutoTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
+    Produto produto;
+
     @Before
     public void setUp() {
+        produto = new Produto();
     }
     
-    @After
-    public void tearDown() {
+    @Test
+    public void testCalculaProdutoABIgualZero() {
+        assertEquals(0, produto.calculaProduto(0, 0));
     }
-
-    /**
-     * Test of calculaProduto method, of class Produto.
-     */
+    
     @Test
     public void testCalculaProduto() {
-        System.out.println("calculaProduto");
-        int a = 2;
-        int b = 3;
-        Produto instance = new Produto();
-        int expResult = 6;
-        int result = instance.calculaProduto(a, b);
-        assertEquals(expResult, result);
+        assertEquals(1, produto.calculaProduto(1, 1));
     }
     
+    @Test(expected = IllegalArgumentException.class)
+    public void testCalculaProdutoAMenorQueZero() {
+        assertEquals(1, produto.calculaProduto(-1, 1));
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testCalculaProdutoBMenorQueZero() {
+        assertEquals(1, produto.calculaProduto(1, -1));
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testCalculaProdutoAMenorQueZeroBMenorQueZero() {
+        assertEquals(1, produto.calculaProduto(-1, -1));
+    }
 }
