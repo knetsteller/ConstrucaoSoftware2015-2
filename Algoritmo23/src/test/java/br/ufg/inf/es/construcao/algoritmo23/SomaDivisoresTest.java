@@ -1,47 +1,24 @@
 package br.ufg.inf.es.construcao.algoritmo23;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Netsteller
- */
 public class SomaDivisoresTest {
-
-    public SomaDivisoresTest() {
-    }
-
-    @BeforeClass
-    public static void setUpClass() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-    }
+    SomaDivisores sd;
 
     @Before
     public void setUp() {
+        sd = new SomaDivisores();
     }
 
-    @After
-    public void tearDown() {
-    }
-
-    /**
-     * Test of aplicaSomaDivisores method, of class SomaDivisores.
-     */
     @Test
     public void testAplicaSomaDivisores() {
-        System.out.println("aplicaSomaDivisores");
-        int n = 2;
-        SomaDivisores instance = new SomaDivisores();
-        int expResult = 1;
-        int result = instance.aplicaSomaDivisores(n);
-        assertEquals(expResult, result);
+        assertEquals(1, sd.aplicaSomaDivisores(2));
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testAplicaSomaDivisoresNIgualZero() {
+        sd.aplicaSomaDivisores(0);
     }
 }
