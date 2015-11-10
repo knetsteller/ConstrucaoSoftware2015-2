@@ -45,9 +45,9 @@
         <module>Algoritmo33</module>
         <module>Algoritmo34</module>
         <module>Algoritmo43</module>
-        <module>Algoritmo28</module>
         <module>Algoritmo26</module>
         <module>Algoritmo15</module>
+        <module>Algoritmo17</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
