@@ -9,24 +9,24 @@ public class Polinomio {
     
     /**
      * Calcula o polinômio 
-     * @param x 
-     * @param array
+     * @param literal Literal.
+     * @param array Array dos elementos
      * @return Inteiro correspondente ao polinômio
      */
-    public int calculapolinomio(int x, int[] array) {
+    public int calculapolinomio(int literal, int[] array) {
         int g = array.length;
-        if (g < 1) {
+        if (g <= 0) {
             throw new IllegalArgumentException("O indice deve ser maior ou igual"
                     + " a 1.");
         }
         
         Potencia p = new Potencia();
-        int potencia = p.calculaPotencia(x, g);
-        int polinomio = 0;
-        int contador = 1;
+        int potencia = p.calculaPotencia(literal, g - 1);
+        int polinomio = array[0];
+        int contador = 0;
         while (contador <= (g - 1)) {            
-            potencia = p.calculaPotencia(x, (contador - 1));
-            polinomio += array[contador - 1] * potencia;
+            potencia = p.calculaPotencia(literal, (contador));
+            polinomio += array[contador] * potencia;
             contador += 1;
         }
         

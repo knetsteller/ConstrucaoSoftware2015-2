@@ -6,7 +6,9 @@ import static org.junit.Assert.*;
 
 public class PolinomioTest {
     Polinomio polinomio;
-    int[] array = {0, 1, 2, 3};
+    int[] array1 = {0};
+    int[] array2 = {0, 2};
+    int[] arrayVazio = {};
 
     @Before
     public void setUp() {
@@ -14,8 +16,17 @@ public class PolinomioTest {
     }
 
     @Test
-    public void testCalculapolinomio() {
-        assertEquals(5, polinomio.calculapolinomio(1, 4, array));
+    public void testCalculapolinomioGIgualUm() {
+        assertEquals(0, polinomio.calculapolinomio(1, array1));
     }
-
+    
+    @Test
+    public void testCalculapolinomioGIgualDois() {
+        assertEquals(2, polinomio.calculapolinomio(1, array2));
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testCalculapolinomioGIgualZero() {
+        polinomio.calculapolinomio(1, arrayVazio);
+    }
 }
