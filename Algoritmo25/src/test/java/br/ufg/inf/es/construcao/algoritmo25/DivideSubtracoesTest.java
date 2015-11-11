@@ -1,33 +1,15 @@
 package br.ufg.inf.es.construcao.algoritmo25;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class DivideSubtracoesTest {
     DivideSubtracoes divideSubtracoes;
 
-    public DivideSubtracoesTest() {
-    }
-
-    @BeforeClass
-    public static void setUpClass() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-    }
-
     @Before
     public void setUp() {
         divideSubtracoes = new DivideSubtracoes();
-    }
-
-    @After
-    public void tearDown() {
     }
 
     @Test
