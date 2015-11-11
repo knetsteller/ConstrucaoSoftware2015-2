@@ -1,33 +1,15 @@
 package br.ufg.inf.es.construcao.algoritmo13;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class NumeroHarmonicoTest {
     NumeroHarmonico numeroHarmonico;
 
-    public NumeroHarmonicoTest() {
-    }
-
-    @BeforeClass
-    public static void setUpClass() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-    }
-
     @Before
     public void setUp() {
         numeroHarmonico = new NumeroHarmonico();
-    }
-
-    @After
-    public void tearDown() {
     }
 
     @Test
