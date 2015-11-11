@@ -1,45 +1,22 @@
 package br.ufg.inf.es.construcao.algoritmo38;
 
-import org.junit.After;
-import org.junit.AfterClass;
+import junit.framework.Assert;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class HipotenusaTest {
     Hipotenusa hipotenusa;
-    
-    public HipotenusaTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
     
     @Before
     public void setUp() {
         hipotenusa = new Hipotenusa();
     }
     
-    @After
-    public void tearDown() {
+    @Test
+    public void testCalculaHipotenusa() {
+        Assert.assertEquals(5.0, hipotenusa.calculaHipotenusa(4, 3));
     }
     
-    @Test
-    public void testCalculaHipotenusaAmbosLadosIguaisUm() {
-        hipotenusa.calculaHipotenusa(1, 1);
-    }
-    
-    @Test
-    public void testCalculaHipotenusaAmbosLadosMaioresQueUm() {
-        hipotenusa.calculaHipotenusa(2, 2);
-    }
-
     @Test(expected = IllegalArgumentException.class)
     public void testCalculaHipotenusaLadoMenorQueUm() {
         hipotenusa.calculaHipotenusa(0, 1);
