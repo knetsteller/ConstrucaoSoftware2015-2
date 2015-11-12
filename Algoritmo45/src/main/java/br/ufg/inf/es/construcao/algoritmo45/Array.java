@@ -16,9 +16,9 @@ public class Array {
                     + "maior ou igual a 0.");
         }
         
-        int contador = 1;
+        int contador = 0;
         while (contador <= numeroElementos) {            
-            System.out.println(array[contador]);
+            System.out.print(array[contador]);
             contador += 1;
         }
     }
