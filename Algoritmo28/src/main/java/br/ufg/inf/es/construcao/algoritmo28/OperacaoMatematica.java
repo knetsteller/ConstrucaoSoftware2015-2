@@ -7,6 +7,13 @@ import br.ufg.inf.es.construcao.algoritmo4.Produto;
  * Classe contendo método para operação matemática.
  */
 public class OperacaoMatematica {
+    
+    /**
+     * Realiza a operação de divisão.
+     * @param dividendo Dividendo
+     * @param divisor Divisor.
+     * @param k 
+     */
     public void realizaDivisao(int dividendo, int divisor, int k) {
         if (dividendo <= 0 || divisor <= 0) {
             throw new IllegalArgumentException("As entradas devem ser maiores "
